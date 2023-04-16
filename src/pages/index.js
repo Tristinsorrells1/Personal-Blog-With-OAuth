@@ -8,15 +8,17 @@ function Home() {
 
   return (
     <>
-      <Link href={"/"}>
-          <button>Home</button>
-       </Link>
-    
       {session && (
-          <Link href={"/dashboard"}>
-            <button>Dashboard</button>
-          </Link>
+        <div>
+          <h1>{`Welcome, ${session.user.name}`}</h1>
+          <iframe
+            alt="'Never Gonna Give You Up' music video"
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&mute=1"
+            title="YouTube video player"
+          ></iframe>
+        </div>
       )}
+      {!session && <div>Welcome! Please Sign-in to Read my Blog</div>}
       {!session && (
         <Link href={"/api/auth/signin"}>
           <button
@@ -24,7 +26,9 @@ function Home() {
               e.preventDefault();
               signIn();
             }}
-          >Sign In</button>
+          >
+            Sign In
+          </button>
         </Link>
       )}
       {session && (
