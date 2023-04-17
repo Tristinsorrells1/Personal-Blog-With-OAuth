@@ -34,7 +34,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-width: fit-content;
+  width: 600px;
 }
 
 .selfie {
@@ -48,11 +48,13 @@ body {
   padding: 12px;
   font-weight: 600;
   margin-top: 10vh;
+  width: 600px;
 }
 
 .article-text {
   text-align: left;
   margin: 20px;
+  width: 600px;
 }
 
 .sign-in-btn {
@@ -133,6 +135,6 @@ iframe {
   color: white;
   border: none;
   margin: 10px;
-  width: 30vw;
-  height: 4vh;
+  width: 200px;
+  height: 20px;
 }

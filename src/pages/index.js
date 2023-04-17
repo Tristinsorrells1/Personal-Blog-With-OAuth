@@ -43,8 +43,7 @@ function Home() {
       </div>
       {!session && (
         <p className="article-title">
-          Reflecting on Lessons Learned During an 7-month Intensive 7-Month
-          Software Engineering Program
+          Reflecting on Lessons Learned During a 7-month Intensive Software Engineering Program
         </p>
       )}
       {!session && (
