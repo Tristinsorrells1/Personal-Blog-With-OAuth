@@ -94,7 +94,7 @@ function Home() {
           </p>
           <Link href={"https://terminal.turing.edu/profiles/1686"}>
             <button className="portfolio-btn">
-              Check Out my Other Projects!
+              Check Out My Other Projects!
             </button>
           </Link>
         </div>

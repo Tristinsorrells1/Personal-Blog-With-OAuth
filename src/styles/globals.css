@@ -117,3 +117,22 @@ iframe {
   display: flex;
   justify-content: center;
 }
+
+.OAuth-container {
+  height: 30vh;
+  margin-top: 200px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.provider-btn {
+  background-color: rgb(23, 108, 245);
+  color: white;
+  border: none;
+  margin: 10px;
+  width: 30vw;
+  height: 4vh;
+}
