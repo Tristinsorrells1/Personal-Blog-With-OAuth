@@ -34,7 +34,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-width: fit-content;
+  width: 100vw;
 }
 
 .selfie {
@@ -48,11 +48,13 @@ body {
   padding: 12px;
   font-weight: 600;
   margin-top: 10vh;
+  width: 100vw;
 }
 
 .article-text {
   text-align: left;
   margin: 20px;
+  width: 100vw;
 }
 
 .sign-in-btn {
@@ -111,7 +113,7 @@ iframe {
 }
 
 .continue-reading-container {
-  width: 600px;
+  width: 100vw;
   margin-right: auto;
   margin-left: auto;
   display: flex;
@@ -121,7 +123,7 @@ iframe {
 .OAuth-container {
   height: 30vh;
   margin-top: 200px;
-  width: 100%;
+  width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
