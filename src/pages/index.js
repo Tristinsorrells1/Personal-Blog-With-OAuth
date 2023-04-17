@@ -8,12 +8,7 @@ function Home() {
     <section>
       <div className="header">
         <div className="author-info">
-          <img
-            src="/IMG_2583.jpeg"
-            className="selfie"
-            height="50vh"
-            width="50vw"
-          ></img>
+          <img src="/pic.png" className="selfie" alt="Picture of Tristin"></img>
           <p className="header-grey">by</p>
           <p className="header-main">Tristin Sorrells</p>
           <p className="header-grey">on</p>
@@ -35,6 +30,7 @@ function Home() {
         {session && (
           <Link href={"/api/auth/signout"}>
             <button
+              className="sign-in-btn"
               onClick={(e) => {
                 e.preventDefault();
                 signOut();
@@ -45,6 +41,38 @@ function Home() {
           </Link>
         )}
       </div>
+      {!session && (
+        <p className="article-title">
+          Reflecting on Lessons Learned During an 7-month Intensive 7-Month
+          Software Engineering Program
+        </p>
+      )}
+      {!session && (
+        <p className="article-text">
+          This October, I enrolled in the Turing School of Software and
+          Designs's Front-End Engineering Program.
+        </p>
+      )}
+      {!session && (
+        <p className="article-text">
+          With graduation rapidly approaching, I want to reflect on the valuable experiences I gained, the important lessons learned, and all the aha moments that made everything worth it. In this blog, I will walk you through my . . .
+        </p>
+      )}
+      {!session && (
+        <Link href={"/api/auth/signin"}>
+          <div className="continue-reading-container">
+            <button
+              className="continue-reading-btn"
+              onClick={(e) => {
+                e.preventDefault();
+                signIn();
+              }}
+            >
+              Continue Reading
+            </button>
+          </div>
+        </Link>
+      )}
       {session && (
         <div className="rick-rolled-container">
           <h1>{`You've been Rickrolled, ${
@@ -65,38 +93,11 @@ function Home() {
             as a built-in OAuth Provider.
           </p>
           <Link href={"https://terminal.turing.edu/profiles/1686"}>
-            <button className="portfolio-btn">Check out my other projects!</button>
+            <button className="portfolio-btn">
+              Check Out My Other Projects!
+            </button>
           </Link>
         </div>
-      )}
-      {!session && (
-        <p className="article-title">
-          Reflecting on Lessons Learned During an 7-month Intensive 7-Month
-          Software Engineering Program
-        </p>
-      )}
-      {!session && (
-        <p className="article-text">
-          {" "}
-          This October, I enrolled in the Turing School of Software and
-          Designs's Front-End Engineering Program. With graduation quickly
-          approaching, I wanted to reflect on the . . .
-        </p>
-      )}
-      {!session && (
-        <Link href={"/api/auth/signin"}>
-          <div className="continue-reading-container">
-            <button
-              className="continue-reading-btn"
-              onClick={(e) => {
-                e.preventDefault();
-                signIn();
-              }}
-            >
-              Continue Reading
-            </button>
-          </div>
-        </Link>
       )}
     </section>
   );
