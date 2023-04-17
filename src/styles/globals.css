@@ -73,13 +73,13 @@ body {
   align-items: center;
   flex-direction: column;
   height: 60vh;
-  margin: 5vh;
+  margin: 5vh auto 0 auto;
   width: 90%;
 }
 
 iframe {
   width: 80%;
-  height: 50vh;
+  height: 65vh;
 }
 
 .explaination-text {
@@ -103,6 +103,7 @@ iframe {
 
 .portfolio-btn {
   padding: 12px 40px;
+  margin-top: 10px;
 }
 
 .continue-reading-btn {
