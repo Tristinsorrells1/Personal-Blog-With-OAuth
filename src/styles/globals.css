@@ -2,8 +2,8 @@ html,
 body {
   padding: 0;
   margin: 0;
-  height: 100vh;
-  min-width: 700px;
+  height: 100%;
+  width: 100%;
   overflow: hidden;
 }
 
@@ -140,7 +140,7 @@ iframe {
 }
 
 .home-container {
-  width: 110vw;
-  margin-right: auto;
-  margin-left: auto;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
