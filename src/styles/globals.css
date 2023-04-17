@@ -62,7 +62,7 @@ body {
   border: .5px solid black;
   background-color: white;
   width: fit-content;
-  padding: 5px 15px 5px 15px;
+  padding: 3px 12px 3px 12px;
 }
 
 .rick-rolled-container {
@@ -114,8 +114,6 @@ iframe {
 
 .continue-reading-container {
   width: 600px;
-  margin-right: auto;
-  margin-left: auto;
   display: flex;
   justify-content: center;
 }
