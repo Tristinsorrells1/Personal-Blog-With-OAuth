@@ -11,4 +11,7 @@ module.exports = {
   eslint: {
     ignoreDuringBuilds: true,
   },
+  env: {
+    NEXTAUTH_URL: process.env.NEXTAUTH_URL,
+  },
 };
