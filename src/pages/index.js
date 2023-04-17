@@ -83,7 +83,7 @@ function Home() {
             title="YouTube video player"
           ></iframe>
           <p className="explaination-text">
-            In all serious, one of the most valuable lessons I've learned is to
+            In all seriousness, one of the most valuable lessons I've learned is to
             keep things fun.
           </p>
           <p className="explaination-text">
