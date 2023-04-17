@@ -1,50 +1,104 @@
-import Styles from '../styles/Home.module.css'
-import Link from 'next/link';
-
-import { signIn, signOut , useSession } from 'next-auth/react';
+import Link from "next/link";
+import { signIn, signOut, useSession } from "next-auth/react";
 
 function Home() {
-  const { data: session, status  } = useSession();
+  const { data: session, status } = useSession();
 
   return (
-    <>
+    <section>
+      <div className="header">
+        <div className="author-info">
+          <img
+            src="/IMG_2583.jpeg"
+            className="selfie"
+            height="50vh"
+            width="50vw"
+          ></img>
+          <p className="header-grey">by</p>
+          <p className="header-main">Tristin Sorrells</p>
+          <p className="header-grey">on</p>
+          <p className="header-main"> April 17, 2023</p>
+        </div>
+        {!session && (
+          <Link href={"/api/auth/signin"}>
+            <button
+              className="sign-in-btn"
+              onClick={(e) => {
+                e.preventDefault();
+                signIn();
+              }}
+            >
+              Sign-In
+            </button>
+          </Link>
+        )}
+        {session && (
+          <Link href={"/api/auth/signout"}>
+            <button
+              onClick={(e) => {
+                e.preventDefault();
+                signOut();
+              }}
+            >
+              Sign Out
+            </button>
+          </Link>
+        )}
+      </div>
       {session && (
-        <div>
-          <h1>{`Welcome, ${session.user.name}`}</h1>
+        <div className="rick-rolled-container">
+          <h1>{`You've been Rickrolled, ${
+            session.user.name.split(" ")[0]
+          }!`}</h1>
           <iframe
             alt="'Never Gonna Give You Up' music video"
             src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&mute=1"
             title="YouTube video player"
           ></iframe>
+          <p className="explaination-text">
+            In all serious, one of the most valuable lessons I've learned is to
+            keep things fun.
+          </p>
+          <p className="explaination-text">
+            Creating this silly little fake blog was my way of learning
+            NextAuth.js for client-side authentication in Next.js using Google
+            as a built-in OAuth Provider.
+          </p>
+          <Link href={"https://terminal.turing.edu/profiles/1686"}>
+            <button className="portfolio-btn">Check out my other projects!</button>
+          </Link>
         </div>
       )}
-      {!session && <div>Welcome! Please Sign-in to Read my Blog</div>}
+      {!session && (
+        <p className="article-title">
+          Reflecting on Lessons Learned During an 7-month Intensive 7-Month
+          Software Engineering Program
+        </p>
+      )}
+      {!session && (
+        <p className="article-text">
+          {" "}
+          This October, I enrolled in the Turing School of Software and
+          Designs's Front-End Engineering Program. With graduation quickly
+          approaching, I wanted to reflect on the . . .
+        </p>
+      )}
       {!session && (
         <Link href={"/api/auth/signin"}>
-          <button
-            onClick={(e) => {
-              e.preventDefault();
-              signIn();
-            }}
-          >
-            Sign In
-          </button>
+          <div className="continue-reading-container">
+            <button
+              className="continue-reading-btn"
+              onClick={(e) => {
+                e.preventDefault();
+                signIn();
+              }}
+            >
+              Continue Reading
+            </button>
+          </div>
         </Link>
       )}
-      {session && (
-        <Link href={"/api/auth/signout"}>
-          <button
-            onClick={(e) => {
-              e.preventDefault();
-              signOut();
-            }}
-            className={Styles.nav_button}
-          >
-            Sign Out
-          </button>
-        </Link>
-      )}
-    </>
+    </section>
   );
 }
 
