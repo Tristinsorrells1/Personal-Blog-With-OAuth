@@ -5,7 +5,7 @@ function Home() {
   const { data: session, status } = useSession();
 
   return (
-    <section>
+    <section className="home-container">
       <div className="header">
         <div className="author-info">
           <img src="/pic.png" className="selfie" alt="Picture of Tristin"></img>
