@@ -2,12 +2,13 @@ html,
 body {
   padding: 0;
   margin: 0;
-  height: 100vh;
-  min-width: 700px;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
 }
 
 .author-info {
-  width: 70vw;
+  /* width: 70vw; */
   min-width: fit-content;
   height: 5vh;
   display: flex;
@@ -18,6 +19,7 @@ body {
 .header-grey,
 .header-main {
   margin: 8px;
+  font-size: 12px;
 }
 
 .header-grey {
@@ -34,7 +36,6 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-width: fit-content;
 }
 
 .selfie {
@@ -48,19 +49,22 @@ body {
   padding: 12px;
   font-weight: 600;
   margin-top: 10vh;
+  width: 100%;
 }
 
 .article-text {
   text-align: left;
   margin: 20px;
+  width: 100%;
 }
 
 .sign-in-btn {
   border-radius: 20px;
+  font-size: 10px;
   border: .5px solid black;
   background-color: white;
-  width: fit-content;
-  padding: 5px 15px 5px 15px;
+  width: 50px;
+  padding: 3px 0 3px 0;
 }
 
 .rick-rolled-container {
@@ -111,9 +115,7 @@ iframe {
 }
 
 .continue-reading-container {
-  width: 600px;
-  margin-right: auto;
-  margin-left: auto;
+  width: 100vw;
   display: flex;
   justify-content: center;
 }
@@ -121,7 +123,7 @@ iframe {
 .OAuth-container {
   height: 30vh;
   margin-top: 200px;
-  width: 100%;
+  width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -133,6 +135,12 @@ iframe {
   color: white;
   border: none;
   margin: 10px;
-  width: 30vw;
-  height: 4vh;
+  width: 200px;
+  height: 20px;
+}
+
+.home-container {
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
