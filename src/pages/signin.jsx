@@ -32,7 +32,7 @@ function signin() {
         </div>
       </div>
       <div className="OAuth-container">
-        <p>Login to Continue Reading</p>
+        <p className="login-text">Login to Continue Reading</p>
         {providers &&
           Object.values(providers).map((provider) => (
             <div key={provider.name}>

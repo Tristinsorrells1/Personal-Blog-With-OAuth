@@ -43,7 +43,8 @@ function Home() {
       </div>
       {!session && (
         <p className="article-title">
-          Reflecting on Lessons Learned During a 7-month Intensive Software Engineering Program
+          Reflecting on Lessons Learned During a 7-month Intensive Software
+          Engineering Program
         </p>
       )}
       {!session && (
@@ -54,7 +55,10 @@ function Home() {
       )}
       {!session && (
         <p className="article-text">
-          With graduation rapidly approaching, I want to reflect on the valuable experiences I gained, the important lessons learned, and all the aha moments that made everything worth it. In this blog, I will walk you through my . . .
+          With graduation rapidly approaching, I want to reflect on the valuable
+          experiences I gained, the important lessons learned, and all the aha
+          moments that made everything worth it. In this blog, I will walk you
+          through my . . .
         </p>
       )}
       {!session && (
@@ -77,14 +81,20 @@ function Home() {
           <h1>{`You've been Rickrolled, ${
             session.user.name.split(" ")[0]
           }!`}</h1>
-          <iframe
-            alt="'Never Gonna Give You Up' music video"
-            src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&mute=1"
-            title="YouTube video player"
-          ></iframe>
+          <div className="iframe">
+            <iframe
+              alt="'Never Gonna Give You Up' music video"
+              src="https://www.youtube.com/embed/dQw4w9WgXcQ?"
+              mute="1"
+              frameborder="0" 
+              allow="autoplay; fullscreen; picture-in-picture"
+              title="YouTube video player"
+            >
+            </iframe>
+          </div>
           <p className="explaination-text">
-            In all seriousness, one of the most valuable lessons I've learned is to
-            keep things fun.
+            In all seriousness, one of the most valuable lessons I've learned is
+            to keep things fun.
           </p>
           <p className="explaination-text">
             Creating this silly little fake blog was my way of learning
