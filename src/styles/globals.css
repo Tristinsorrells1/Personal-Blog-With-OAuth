@@ -73,9 +73,8 @@ body {
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
-  height: 25%;
-  margin: 5vh auto 0 auto;
   width: 90%;
+  padding: 0 5vw 0 5vw;
 }
 
 iframe {
@@ -84,16 +83,15 @@ iframe {
 }
 
 .iframe {
-  width: 70%;
-  height: 25vh;
-  border: 2px solid pink;
+  width: 90%;
+  height: 40vh;
 }
 
 .explaination-text {
   margin: 15px;
   width: 100%;
   text-align: left;
-  font-size: 18px;
+  font-size: 17px;
 }
 
 .portfolio-btn,
@@ -153,11 +151,13 @@ iframe {
   width: 100%;
   margin: 0;
   padding: 0;
+  height: 100%;
 }
 
 @media (min-width: 600px) {
   .iframe {
     height: 50vh;
+    width: 70%;
   }
 }
 
